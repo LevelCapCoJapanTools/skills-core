@@ -1,0 +1,10 @@
+# skills-core — 全汎用スキルセット
+#
+# このセットは skills-core が管理するすべての汎用スキルを含む。
+# 複数案件で共通に利用できる汎用スキル全体を取り込みたい場合に使用する。
+#
+# include 基準: catalog ルート基準
+# 表現: include のみ / glob のみ / セット依存なし
+
+include:
+  - .claude/agents/common/**
