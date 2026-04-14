@@ -1,0 +1,12 @@
+# skills-core — バリデーション系汎用スキルセット
+#
+# このセットは入力値の検証を目的とした汎用スキルのみを含む。
+# JSON / YAML / パスのバリデーションが必要な案件で使用する。
+#
+# include 基準: catalog ルート基準
+# 表現: include のみ / glob のみ / セット依存なし
+
+include:
+  - .claude/agents/common/json-validator.md
+  - .claude/agents/common/yaml-validator.md
+  - .claude/agents/common/path-sanitizer.md

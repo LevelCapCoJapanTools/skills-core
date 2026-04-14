@@ -6,6 +6,8 @@ on:
     paths:
       - "docs/**/*.md"
       - ".github/**/*.md"
+      - ".claude/agents/common/**/*.md"
+      - "README.md"
 
 permissions:
   contents: read
@@ -59,7 +61,7 @@ jobs:
           set -eu
           # 複数コマンドをパイプで繋いでいないため pipefail は省略
           exit_code=0
-          markdownlint "docs/**/*.md" ".github/**/*.md" > markdownlint.txt || exit_code=$?
+          markdownlint "docs/**/*.md" ".github/**/*.md" ".claude/agents/common/**/*.md" "README.md" > markdownlint.txt || exit_code=$?
           reviewdog_exit=0
           reviewdog < markdownlint.txt \
             -efm="%f:%l:%c %m" \
